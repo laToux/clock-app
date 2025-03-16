@@ -40,14 +40,14 @@ body {
   fill: none;
   stroke: #fff;
   stroke-width: 2;
-  stroke-dasharray: 282.743; /* Circumference: 2 * π * 45 */
-  stroke-dashoffset: 282.743;
+  stroke-dasharray: 301.593; /* Circumference: 2 * π * 48 */
+  stroke-dashoffset: 301.593;
   animation: progress 60s linear infinite;
 }
 
 @keyframes progress {
   0% {
-    stroke-dashoffset: 282.743;
+    stroke-dashoffset: 301.593;
   }
   100% {
     stroke-dashoffset: 0;
