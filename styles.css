@@ -1,10 +1,10 @@
-/* styles.css */
 body {
   margin: 0;
   padding: 0;
 }
 
 .clock-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +15,45 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.seconds-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+  z-index: 0;
+}
+
+.clock-content {
+  z-index: 1;
+  text-align: center;
+}
+
+.background-circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 2;
+}
+
+.progress-circle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 282.743; /* Circumference: 2 * π * 45 */
+  stroke-dashoffset: 282.743;
+  animation: progress 60s linear infinite;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dashoffset: 282.743;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 .day {
   font-size: 3vw;
   opacity: 0.5;
@@ -23,7 +62,7 @@ body {
 
 .time-wrapper {
   display: flex;
-  align-items: baseline;  /* Aligns AM/PM to the baseline (bottom) of the time */
+  align-items: baseline;
   justify-content: center;
   margin-bottom: 2vh;
 }

@@ -1,4 +1,3 @@
-// script.js
 function updateTime() {
   const now = new Date();
 
@@ -14,4 +13,10 @@ function updateTime() {
 }
 
 setInterval(updateTime, 1000);
-updateTime(); // Initial call
+updateTime();
+
+// Synchronize the animation with current time
+const now = new Date();
+const currentSecond = now.getSeconds() + now.getMilliseconds() / 1000;
+const delay = -currentSecond;
+document.querySelector('.progress-circle').style.animationDelay = `${delay}s`;
