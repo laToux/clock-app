@@ -1,0 +1,44 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.day {
+  font-size: 3vw;
+  opacity: 0.5;
+  margin-bottom: 2vh;
+}
+
+.time-wrapper {
+  display: flex;
+  align-items: baseline;  /* Aligns AM/PM to the baseline (bottom) of the time */
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.time {
+  font-size: 20vw;
+}
+
+.ampm {
+  font-size: 5vw;
+  opacity: 0.5;
+  margin-left: 1vw;
+}
+
+.date {
+  font-size: 3vw;
+  opacity: 0.5;
+}
